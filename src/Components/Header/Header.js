@@ -4,11 +4,14 @@ import './Header.css';
 const Header = () => {
     return (
         <nav className='header'>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/services'>Services</Link>
-            <Link to='friends'>Friends</Link>
-            <Link to='/contact'>Contact</Link>
+            <div>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/services'>Services</Link>
+                <Link to='friends'>Friends</Link>
+                <Link to='/contact'>Contact</Link>
+            </div>
+            <h1>Common Header</h1>
         </nav>
     );
 };

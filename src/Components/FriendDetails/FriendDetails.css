@@ -1,0 +1,9 @@
+.single-friend{
+    border: 1px solid cyan;
+    border-radius: 10px;
+    margin:10px 20%;
+}
+.single-friend:hover{
+    color: tomato;
+    background-color: cyan;
+}
