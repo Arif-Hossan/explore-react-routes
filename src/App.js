@@ -4,21 +4,33 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Services from './Components/Services/Services';
+import Friends from './Components/Friends/Friends';
+import Main from './layouts/Main';
 
 function App() {
   const route = createBrowserRouter([
     {
-      path:'/',
-      element:<Home></Home>,
-    },
-    {
-      path:'about',
-      element:<About></About>
-    },
-    {
-      path:'/services',
-      element :<Services></Services>,
-    },
+      path:'',
+      element:<Main></Main>,
+      children:[
+        {
+          path:'',
+          element:<Home></Home>,
+        },
+        {
+          path:'about',
+          element:<About></About>
+        },
+        {
+          path:'/services',
+          element :<Services></Services>,
+        },
+        {
+          path:'/friends',
+          element: <Friends></Friends>
+        }
+      ]
+    }
   ])
   return (
     <div className="App">
